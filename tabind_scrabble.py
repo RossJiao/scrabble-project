@@ -30,7 +30,7 @@ def find_words(letters, word_list):
 
 def main():
     letters = "tabind"
-    dictionary_path = "/usr/share/dict/words"
+    dictionary_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sowpods.txt")
 
     print("TABIND Scrabble Project")
     print(f"Letters: {letters}")
