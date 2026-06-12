@@ -22,7 +22,10 @@ A word is valid if it does not require more of any letter than is available in "
 
 ### Prerequisites
 - Python 3.x (no third-party packages required)
-- macOS (uses built-in system dictionary at `/usr/share/dict/words`)
+- Download the SOWPODS Scrabble dictionary:
+```bash
+curl -o sowpods.txt https://raw.githubusercontent.com/redbo/scrabble/master/dictionary.txt
+```
 
 ### Clone the repository
 ```bash
@@ -35,26 +38,11 @@ cd scrabble-project
 python3 tabind_scrabble.py
 ```
 
-## Sample Output
-TABIND Scrabble Project
-Letters: tabind
-Dictionary loaded: 234454 words
-Found 84 words that can be made from 'tabind':
-
-ab
-ad
-aid
-and
-ant
-...
-tind
-
-Results saved to: scrabble_results.txt
 ## Results
-- Dictionary size: 234,454 words
-- Total valid words found: 84
+- Dictionary size: 178,691 words (SOWPODS official Scrabble dictionary)
+- Total valid words found: 49
 - Words are displayed and saved in alphabetical order
 
 ## Limitations
-- Uses macOS system dictionary (`/usr/share/dict/words`) instead of an official Scrabble dictionary
-- System dictionary may include words not valid in Scrabble, and may exclude some valid Scrabble words
+- Results depend on the SOWPODS dictionary, which is the international Scrabble word list
+- The dictionary file must be downloaded separately before running the program
